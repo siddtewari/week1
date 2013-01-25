@@ -9,7 +9,16 @@ def is_triangle(a,b,c):
 	else:
 		print 'Yes'
 
-is_triangle(1,2,3)
-is_triangle(8,2,1)
-is_triangle(3,4,7)
-is_triangle(3,4,8)
+#is_triangle(1,2,3)
+#is_triangle(8,2,1)
+#is_triangle(3,4,7)
+#is_triangle(3,4,8)
+
+def get_lengths():
+	x = input("Please enter the first side of the triangle: ")
+	y = input("Please enter the second side of the triangle: ")
+	z = input("Please enter the third side of the triangle: ")
+	is_triangle(x,y,z)
+
+get_lengths()
+
