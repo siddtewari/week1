@@ -1,28 +1,28 @@
 # This is where Exercise 5.4 goes
 # Name: Sidd Tewari
 
-# Triangles
-
 def is_triangle(a,b,c):
-	if (a <= 0 or b <= 0 or c <= 0):
-		print 'Please enter only positive numbers'
+	"""Evaluates if a triangle can be formed
+	:p,q,r - absolute values of the parameters
+	"""
+	# taking the absolute values
+	p, q, r = abs(a), abs(b), abs(c)
+	if (p==0 or q==0 or r==0):
+		print '\n Zero, 0, is not an acceptable value. Please renter values \n'
+		get_lengths()
+	elif (p > (q + r)) or (q > (r + p)) or (r > (p + q)):
+		print 'NO ___ :( you shan\'t create the three sided thingie \n'
 	else:
-		if (a > (b + c)) or (b > (c + a)) or (c > (a + b)):
-			print 'No'
-		else:
-			print 'Yes'
-
-#is_triangle(1,2,3)
-#is_triangle(8,2,1)
-#is_triangle(3,4,7)
-#is_triangle(3,4,8)
+		print 'YES!  ... you may create your triangular world \n'
 
 def get_lengths():
-	x = input("Please enter the first side of the triangle: ")
+	"""Takes input from the user and does a type convert 
+	to int to pass as arguments to the function is_triangle
+	"""
+	x = input("\nPlease enter the first side of the triangle: ")
 	y = input("Please enter the second side of the triangle: ")
 	z = input("Please enter the third side of the triangle: ")
 	is_triangle(int(x),int(y),int(z))
-	#is_triangle(x,y,z)
 
+# test to prompt user for input and to evaluate tringularity
 get_lengths()
-
