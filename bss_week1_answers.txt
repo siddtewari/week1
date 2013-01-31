@@ -1,3 +1,9 @@
 *** Cut and paste the for loop here ***
+	{% for message in messages %}
+{{message}}
+	{% endfor %}
 
 *** What is the for loop doing? ***
+The for loop here, is looping through all the message(s) and displaying all the message(s). 
+
+The for is nested under an if statement which is evaluating if there are any messages. 
